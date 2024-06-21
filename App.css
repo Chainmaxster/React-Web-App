@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Honk&display=swap");
+
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #434cf0;
+}
+
+/* Navigation Bar */
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  z-index: 12;
+  background-color: white; /* Added background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow */
+}
+
+.navBar h1 {
+  font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "MORF" 15, "SHLN" 50;
+  margin: 0;
+}
+
+/* Search Button */
+.searchBtn {
+  border: 0.1px solid gray;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.searchBtn input {
+  font-size: 1.2rem;
+  padding: 0 1em;
+  width: 340px;
+  height: 30px;
+  outline: none;
+  border: none;
+}
+
+/* Info Container */
+.infoContainer {
+  padding: 10px;
+  width: 100%;
+  margin: 100px auto;
+}
+
+/* Row */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Card */
+.card {
+  width: 230px;
+  height: 300px;
+  padding: 0 0 1rem 0;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  background-color: white; /* Added background color */
+  border-radius: 10px; /* Added border radius */
+  transition: transform 0.3s; /* Added smooth transition for scaling */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Added scale effect on hover */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  padding: 1rem;
+  background-color: rgba(212, 187, 163, 0.8);
+  border-radius: 15rem 0 0 0;
+  text-align: justify;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+  height: 90%;
+}
+
+.synopsis {
+  width: 80%;
+  height: 50%;
+  margin: 0 auto;
+  padding: 1rem;
+  overflow: auto;
+}
+
+/* Favorite Button */
+.favBtn {
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+  padding: 0.2rem;
+  border-radius: 8px;
+  background-color: rgb(211, 177, 145);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none; /* Removed border */
+}
+
+img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Active Class */
+.active {
+  background-color: lightgray;
+  color: white;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  .navBar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .searchBtn input {
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+}
